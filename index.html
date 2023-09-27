@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Galeria de Fotos</h1>
+      <button type="button" id="open-form">
+        Nova Imagem
+      </button>
+    </div>
+  </header>
+  <div id="form-box">
+    <div class="container">
+      <h4>Inserir nova imagem</h4>
+      <form id="new-image-form">
+        <input type="url" id="image-url" placeholder="Link da imagem"/>
+        <button type="submit" class="send">
+          Enviar
+        </button>
+        <button type="reset" id="cancel-form" class="cancel">
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <ul id="gallery">
+        <li>
+          <img src="./images/foto1.jpg" alt="img 1"/>
+          <a href="./images/foto1.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+        </li>
+        <li>
+          <img src="./images/foto2.jpg" alt="img 1"/>
+          <a href="./images/foto2.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+        </li>
+        <li>
+          <img src="./images/foto3.jpg" alt="img 1"/>
+          <a href="./images/foto3.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+        </li>
+        <li>
+          <img src="./images/foto4.jpg" alt="img 1"/>
+          <a href="./images/foto4.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+        </li>
+        <li>
+          <img src="./images/foto5.jpg" alt="img 1"/>
+          <a href="./images/foto5.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="/image-validation.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>

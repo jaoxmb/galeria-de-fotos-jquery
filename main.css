@@ -1,0 +1,136 @@
+:root{
+  --bg-default: #fff;
+  --bg-color-primary: #6607be;
+  --bg-color-secondary: #5605a1;
+  --bg-green-primary: #0bb856;
+  --bg-green-secondary: #098740;
+  --bg-red-primary: #db3232;
+  --bg-red-secondary: #941212;
+
+  --font-color-primary: #fff;
+  --font-color-secondary: #000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  font-size: 16px;
+  color: var(--font-color-secondary);
+  background-color: var(--bg-default);
+}
+.container{
+  position: relative;
+  width: 100%;
+  /* max-width: 1000px; */
+  /* margin: 0 auto; */
+}
+button, input{
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+button{
+  color: var(--font-color-primary);
+  background-color: #cccc;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+input{
+  color: var(--font-color-secondary);
+  background-color: var(--bg-default);
+}
+input::placeholder{
+  color: #cccc;
+}
+header{
+  background-color: var(--bg-color-primary);
+  border-bottom: 8px solid var(--bg-color-secondary);
+  padding: 10px 0;
+}
+header > .container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+header h1{
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--font-color-primary);
+}
+header button{
+  background-color: var(--bg-green-primary);
+}
+header button:hover{
+  background-color: var(--bg-green-secondary);
+}
+#form-box{
+  background-color: rgb(209, 189, 242);
+  display: none; /* is none because it is controlled by the js code */
+}
+#form-box > .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+#form-box h4{
+  font-size: 22px;
+  font-weight: 600;
+}
+#form-box form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+} 
+#form-box form button.send{
+  background-color: var(--bg-green-primary);
+}
+#form-box form button.send:hover{
+  background-color: var(--bg-green-secondary);
+}
+#form-box form button.cancel{
+  background-color: var(--bg-red-primary);
+}
+#form-box form button.cancel:hover{
+  background-color: var(--bg-red-secondary);
+}
+#gallery{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  user-select: none;
+}
+#gallery > li{
+  position: relative;
+  list-style: none;
+}
+#gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#gallery > li:hover > a{
+  opacity: 1;
+}
+#gallery a{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  color: var(--font-color-primary);
+  padding: 10px;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
